@@ -4,15 +4,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-sm-2 col-md-4">
-        <h1><%= product.name %></h1>
-        <%= image_tag(product.image_url, class: "img-responsive") if product.image_url%>
-        <p>Colour: <%= product.colour %></p>
-        <p>Description: <%= product.description %></p>
-        <p>Price: $<%= product.price %></p>
-      </div><!-- /col -->
-    <% end %>
+    <%= render @products %>
   </div>
 </div>
 
