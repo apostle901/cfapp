@@ -14,3 +14,13 @@ h1 {
 .site-footer {
   background-color: silver;
 }
+
+.carousel-inner > .item > img {
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.carousel-caption {
+  color: black;
+}
+
