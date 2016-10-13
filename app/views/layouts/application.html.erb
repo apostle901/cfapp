@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-brand">
-            <a href="#">Bike Berlin</a>
+            <%= link_to "Bike Berlin", static_pages_landing_page_path %>
           </div> <!-- end navbar-brand -->
         </div>
         <div class="navbar-collapse collapse">
@@ -34,6 +34,13 @@
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "About", static_pages_about_path %></li>
             <li><%= link_to "Contact", static_pages_contact_path %></li>
+            <li>
+              <%= form_tag("/products", method: "get") do %>
+                <%= label_tag(:q, "Search for:") %>
+                <%= text_field_tag(:q) %>
+                <%= submit_tag("Search") %>
+              <% end %>
+            </li>
           </ul>
         </div>
       </div>

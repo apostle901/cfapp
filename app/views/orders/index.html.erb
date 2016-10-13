@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Order Number</th>
+        <th>User ID</th>
+        <th>Product</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tr><%= render @orders %></tr>
+  </table>
+</div>
+
+<br>
+<%= link_to 'New Order', "orders#new" %>
