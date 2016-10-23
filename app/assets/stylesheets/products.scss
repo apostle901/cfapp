@@ -2,3 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.product-image {
+  width: 50%;
+}
+
+.product-description {
+  width: 50%;
+  font-family: "Proza Libre";
+}
+
+#product-title {
+  color: blue;
+  text-align: center;
+  font-family: "Roboto";
+}
