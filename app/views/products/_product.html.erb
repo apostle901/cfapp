@@ -1,7 +1,7 @@
 <div class="col-sm-2 col-md-4">
-  <h1><%= product.name %></h1>
-  <%= image_tag(product.image_url, class: "img-responsive") if product.image_url%>
-  <p>Colour: <%= product.colour %></p>
+  <h1><%= link_to product.name, product_path(product) %></h1>
+  <%= link_to image_tag(product.image_url, class: "img-responsive"), product_path(product) if product.image_url%>
+  <p>Color: <%= product.colour %></p>
   <p>Description: <%= product.description %></p>
   <p>Price: $<%= product.price %></p>
 </div><!-- /col -->
