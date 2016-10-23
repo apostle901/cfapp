@@ -23,6 +23,14 @@
       <h3><strong>Price: $
       <%= @product.price %></strong></h3>
     </p>
+ 
+    <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+  </div>
+
+  <div class="col-md-12">
+    <p>
+      <%= render 'new_comments', product: @product %>
+    </p>
   </div>
 
   <div class="col-md-12">
