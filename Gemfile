@@ -50,3 +50,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Add Devise for login
 gem 'devise'
 gem 'cancancan', '~> 1.10'
+# Paginate gem
+gem 'will_paginate'
