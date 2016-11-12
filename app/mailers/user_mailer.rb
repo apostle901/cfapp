@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
         :subject => "A new contact form message from #{name}")
   end
 
-  def thank_you
+  def thank_you(email, name, message)
     @name = params[:name]
     @email = params[:email]
     @message = params[:message]
