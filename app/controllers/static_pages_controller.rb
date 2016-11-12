@@ -19,7 +19,7 @@ class StaticPagesController < ApplicationController
   end
 
   def thank_you
-    @name = param[:name]
+    @name = params[:name]
     @email = params[:email]
     @message = params[:message]
     ActionMailer::Base.mail(:from => @email,
