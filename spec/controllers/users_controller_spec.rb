@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe UsersController, :type => :controller do
   before do
-    @user = User.create!(email: "test@now.com", password: "deez guys")
-    @user2 = User.create!(email: "tester@now.com", password: "deez new guys")
+    @user = FactoryGirl.create(:user)
+    @user2 = FactoryGirl.create(:user, last_name: "Smith")
   end
   
   describe 'GET #show' do
