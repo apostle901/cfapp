@@ -11,32 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="form-horizontal col-md-6 col-md-offset-3">
+    <div class="form-group">
+      <%= f.text_field :name, placeholder: "Name", class: "form-control", autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.text_field :colour, placeholder: "Color", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.text_area :description, placeholder: "Description", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.url_field :image_url, placeholder: "Image Url", class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.number_field :price, placeholder: "Price", in: 1...50000, step: 1, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.submit "Submit", class: "btn btn-large btn-primary btn-block" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :colour %>
-    <%= f.text_field :colour %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :image_url %>
-    <%= f.url_field :image_url %>
-  </div>
-
-  <div class="field">
-    <%= f.label :price %>
-    <%= f.number_field :price, in: 1...50000, step: 1 %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

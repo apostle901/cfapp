@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
 
+  before_filter :authenticate_user!
   load_and_authorize_resource
   
   def create
@@ -18,10 +19,14 @@ class CommentsController < ApplicationController
   end
  
   def destroy
-    @comment = Comment.find(params[:id])
-    product = @comment.product
-    @comment.destroy
-    redirect_to product, notice: 'Review was successfully deleted'
+    if current_user.admin?
+      @comment = Comment.find(params[:id])
+      product = @comment.product
+      @comment.destroy
+      redirect_to product, notice: 'Review was successfully deleted'
+    else
+      redirect_to @product, alert: 'Only administrators can delete'
+    end
   end
 
   private

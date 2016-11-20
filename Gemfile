@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0'
@@ -55,3 +54,5 @@ gem 'devise'
 gem 'cancancan', '~> 1.10'
 # Paginate gem
 gem 'will_paginate'
+# Accept payments with stripe
+gem 'stripe'
