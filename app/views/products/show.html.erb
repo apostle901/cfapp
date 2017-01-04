@@ -1,12 +1,13 @@
 <div class="showImage">
-  <div id="product-title" class="col-md-12">
+  <div class="container col-xs-12">
+  <div class="product-title center-block">
     <p>
       <h2> <%= @product.name %> </h2><br/>
       <strong>Color:</strong>
       <%= @product.colour %>
     </p>
   </div>
-
+  </div>
   <div class="product-image col-md-8">
     <%= image_tag @product.image_url, class: "img-responsive" %>
   </div>
